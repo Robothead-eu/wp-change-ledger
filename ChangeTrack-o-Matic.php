@@ -29,14 +29,14 @@ if(!class_exists('ChangeTrackoMatic')){
 
 
 			if(! wp_next_scheduled ( 'changetrackomatic_logging_event_plugin' )) {
-				wp_schedule_event(time(), 'hourly', 'changetrackomatic_logging_event_plugin' );
+				wp_schedule_event(time(), 'daily', 'changetrackomatic_logging_event_plugin' );
 			}
 			if(! wp_next_scheduled ( 'changetrackomatic_logging_wp_version_event' )) {
-				wp_schedule_event(time(), 'hourly', 'changetrackomatic_logging_wp_version_event' );
+				wp_schedule_event(time(), 'daily', 'changetrackomatic_logging_wp_version_event' );
 			}
 
 			if(! wp_next_scheduled ( 'changetrackomatic_logging_theme_event' )) {
-				wp_schedule_event(time(), 'hourly', 'changetrackomatic_logging_theme_event' );
+				wp_schedule_event(time(), 'daily', 'changetrackomatic_logging_theme_event' );
 			}
 
 			$this->runCheckTheme = new runCheckTheme();
